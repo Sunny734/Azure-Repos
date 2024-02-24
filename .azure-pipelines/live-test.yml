@@ -52,6 +52,9 @@ variables:
   ArtifactsName: LiveTestArtifacts
   DataLocation: $(Pipeline.Workspace)/$(ArtifactsName)
   SuppressAzurePowerShellBreakingChangeWarnings: true
+  EnableTestCoverage: true
+  TestCoverageLocation: $(DataLocation)
+  AZURE_CORE_SHOW_SECRETS_WARNING: true
 
 schedules:
 - cron: "0 19 * * *"
